@@ -1,0 +1,23 @@
+[package]
+name = "apiapp"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.5.0"
+uuid = "1.7.0"
+
+
+[dependencies.rocket_db_pools]
+version = "0.1.0"
+features = ["sqlx_sqlite"]
+
+[default.databases.db_name]
+url = "C:/Users/prach/Documents/RustProject/apiapp/db.sqlite"
+
+min_connections = 64
+max_connections = 1024
+connect_timeout = 5
+idle_timeout = 120
